@@ -8,10 +8,6 @@ public class LocalRepoMap {
 
     private static final HashMap<String, String> map = new HashMap<>();
 
-    public static HashMap<String, String> getMap() {
-        return map;
-    }
-
     public static void addToPhoneBook(String name, String phoneNumber) {
         map.put(name, phoneNumber);
     }
