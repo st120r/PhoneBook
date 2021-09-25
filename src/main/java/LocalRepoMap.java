@@ -32,27 +32,11 @@ public class LocalRepoMap {
     }
 
     public static void findByPhoneNumber(String phoneNumber) {
-        while (map.entrySet().iterator().hasNext()) {
-            if (map.containsValue(phoneNumber)) {
-                Set<Map.Entry<String, String>> entrySet = map.entrySet();
-                if (entrySet.size() > 0) {
-                    for (Map.Entry<String, String> entry : entrySet) {
-                        if (entry != null && phoneNumber.equalsIgnoreCase(entry.getValue())) {
-                            System.out.println(entry.getKey());
-                        }
-                    }
-                }
+        Set<Map.Entry<String,String>> entrySet = map.entrySet();
+        for (Map.Entry<String,String> pair : entrySet) {
+            if (phoneNumber.equals(pair.getValue())) {
+                System.out.println(pair.getKey());
             }
         }
     }
 }
-/**
- * Set<Entry<String,String>> entrySet = myMap().entrySet();
- * if(entrySet!=null && entrySet.size>0) {
- * for(Entry<String,String> entry : entrySet) {
- * if(entry!=null && paramName.equalsIgnoreCase(entry.getValue())) {
- * keyForValue = entry.getKey();
- * }
- * }
- * }
- */

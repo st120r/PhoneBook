@@ -3,7 +3,7 @@ package src.main.java;
 import java.io.IOException;
 
 public class Main {
-    public static void Main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
         System.out.println("""
                               Команда "Добавить" и введённые после неё имя и номер телефона будут добавлять новую запись в список.
                               Команда "Редактировать" и имя человека после неё, будут изменять номер телефона этого человека.
